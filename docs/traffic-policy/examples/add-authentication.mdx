@@ -2,6 +2,7 @@
 title: Authentication Examples
 sidebar_label: Add Authentication
 ---
+
 import { JWTsRateLimiting } from "/traffic-policy/gallery/JWTsRateLimiting";
 import { OAuthConditionalAccess } from "/traffic-policy/gallery/OAuthConditionalAccess";
 import { OIDCIdentityToken } from "/traffic-policy/gallery/OIDCIdentityToken";
@@ -19,9 +20,9 @@ The following example adds key-based rate limiting to your endpoints based on yo
 This example grants conditional access to a page using the following ngrok [OAuth action result variables](/traffic-policy/actions/oauth):
 
 - `actions.ngrok.oauth.identity.email.endsWith('ngrok.com')`
-    - Checks the email address of the authorized user from the provider. In the example, if the email address's domain is `ngrok.com`, the user will be granted access to the page.
+  - Checks the email address of the authorized user from the provider. In the example, if the email address's domain is `ngrok.com`, the user will be granted access to the page.
 - `actions.ngrok.oauth.identity.name`
-    - Gets the name of the authorized user from the provider. In this example, the name will be displayed in a welcome message or a rejection message depending on if the user is authenticated.
+  - Gets the name of the authorized user from the provider. In this example, the name will be displayed in a welcome message or a rejection message depending on if the user is authenticated.
 
 <OAuthConditionalAccess />
 
